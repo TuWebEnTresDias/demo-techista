@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8fafc"/>
+  <rect width="800" height="180" fill="#bae6fd"/>
+  <circle cx="700" cy="80" r="34" fill="#fde047"/>
+  <!-- building -->
+  <rect x="80" y="200" width="640" height="280" fill="#fde68a"/>
+  <!-- new corrugated roof -->
+  <polygon points="40,210 760,210 720,120 80,120" fill="url(#ch)"/>
+  <defs>
+    <linearGradient id="ch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cbd5e1"/>
+      <stop offset="1" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#64748b" stroke-width="4" opacity="0.7">
+    <line x1="120" y1="120" x2="120" y2="210"/>
+    <line x1="180" y1="120" x2="180" y2="210"/>
+    <line x1="240" y1="120" x2="240" y2="210"/>
+    <line x1="300" y1="120" x2="300" y2="210"/>
+    <line x1="360" y1="120" x2="360" y2="210"/>
+    <line x1="420" y1="120" x2="420" y2="210"/>
+    <line x1="480" y1="120" x2="480" y2="210"/>
+    <line x1="540" y1="120" x2="540" y2="210"/>
+    <line x1="600" y1="120" x2="600" y2="210"/>
+    <line x1="660" y1="120" x2="660" y2="210"/>
+  </g>
+  <!-- highlight on ridges -->
+  <g stroke="#e2e8f0" stroke-width="2" opacity="0.8">
+    <line x1="150" y1="120" x2="150" y2="210"/>
+    <line x1="330" y1="120" x2="330" y2="210"/>
+    <line x1="510" y1="120" x2="510" y2="210"/>
+  </g>
+  <!-- door -->
+  <rect x="370" y="320" width="70" height="160" rx="6" fill="#b45309"/>
+  <!-- check -->
+  <circle cx="400" cy="330" r="30" fill="#22c55e"/>
+  <path d="M384 330 l11 12 l20 -24" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="470" font-family="Arial" font-size="22" fill="#15803d" text-anchor="middle" font-weight="bold">Cubierta de chapa nueva</text>
+</svg>

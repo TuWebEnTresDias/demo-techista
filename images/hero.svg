@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfdbfe"/>
+      <stop offset="0.55" stop-color="#e0ecff"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ea580c"/>
+      <stop offset="1" stop-color="#c2410c"/>
+    </linearGradient>
+    <linearGradient id="roof2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#fcd34d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1330" cy="170" r="90" fill="#fde047" opacity="0.9"/>
+  <circle cx="1330" cy="170" r="120" fill="#fef08a" opacity="0.35"/>
+
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.7">
+    <ellipse cx="300" cy="150" rx="90" ry="34"/>
+    <ellipse cx="370" cy="135" rx="70" ry="30"/>
+    <ellipse cx="240" cy="135" rx="60" ry="26"/>
+    <ellipse cx="900" cy="100" rx="80" ry="30"/>
+    <ellipse cx="960" cy="88" rx="60" ry="24"/>
+  </g>
+
+  <!-- ground -->
+  <rect y="720" width="1600" height="180" fill="#dcfce7"/>
+  <rect y="720" width="1600" height="14" fill="#bbf7d0"/>
+
+  <!-- House -->
+  <g>
+    <!-- walls -->
+    <rect x="560" y="430" width="480" height="300" fill="url(#wall)"/>
+    <!-- roof -->
+    <polygon points="520,440 800,250 1080,440" fill="url(#roof)"/>
+    <polygon points="520,440 800,250 1080,440 1040,460 800,290 560,460" fill="url(#roof2)" opacity="0.55"/>
+    <!-- roof tiles lines -->
+    <g stroke="#7c2d12" stroke-width="3" opacity="0.45">
+      <line x1="640" y1="370" x2="960" y2="370"/>
+      <line x1="600" y1="410" x2="1000" y2="410"/>
+      <line x1="560" y1="440" x2="1040" y2="440"/>
+    </g>
+    <!-- chimney -->
+    <rect x="940" y="300" width="46" height="90" fill="#9a3412"/>
+    <!-- door -->
+    <rect x="760" y="560" width="80" height="170" rx="6" fill="#b45309"/>
+    <circle cx="826" cy="648" r="6" fill="#fde68a"/>
+    <!-- windows -->
+    <rect x="610" y="500" width="80" height="80" rx="6" fill="#bae6fd" stroke="#9a3412" stroke-width="5"/>
+    <rect x="910" y="500" width="80" height="80" rx="6" fill="#bae6fd" stroke="#9a3412" stroke-width="5"/>
+    <!-- ladder / techista -->
+    <g stroke="#7c2d12" stroke-width="6" stroke-linecap="round">
+      <line x1="1120" y1="730" x2="1180" y2="470"/>
+      <line x1="1180" y1="730" x2="1240" y2="470"/>
+      <line x1="1138" y1="660" x2="1198" y2="660"/>
+      <line x1="1156" y1="590" x2="1216" y2="590"/>
+      <line x1="1174" y1="520" x2="1234" y2="520"/>
+    </g>
+    <!-- techista figure on roof -->
+    <g>
+      <circle cx="800" cy="232" r="20" fill="#1f2937"/>
+      <rect x="784" y="250" width="32" height="46" rx="10" fill="#ea580c"/>
+      <rect x="786" y="292" width="12" height="34" rx="6" fill="#1f2937"/>
+      <rect x="802" y="292" width="12" height="34" rx="6" fill="#1f2937"/>
+      <rect x="812" y="258" width="34" height="12" rx="6" fill="#1f2937" transform="rotate(20 812 258)"/>
+    </g>
+  </g>
+
+  <!-- small second house for depth -->
+  <g opacity="0.85">
+    <rect x="1180" y="540" width="220" height="180" fill="#f1f5f9"/>
+    <polygon points="1160,550 1290,440 1420,550" fill="#0f766e"/>
+  </g>
+</svg>

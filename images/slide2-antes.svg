@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#e2e8f0"/>
+  <!-- building wall -->
+  <rect x="60" y="120" width="680" height="360" fill="#cbd5e1"/>
+  <!-- flat roof/terraza top -->
+  <rect x="60" y="100" width="680" height="60" fill="#94a3b8"/>
+  <rect x="60" y="100" width="680" height="14" fill="#64748b"/>
+  <!-- cracks on terraza -->
+  <g stroke="#475569" stroke-width="5" fill="none" opacity="0.8">
+    <path d="M140 130 l60 0 l20 18 l50 -5"/>
+    <path d="M520 120 l40 14 l30 -4 l40 16"/>
+    <path d="M300 145 l70 -6"/>
+  </g>
+  <!-- peeling / humidity stains -->
+  <g fill="#60a5fa" opacity="0.5">
+    <ellipse cx="250" cy="138" rx="60" ry="14"/>
+    <ellipse cx="600" cy="132" rx="70" ry="12"/>
+  </g>
+  <!-- puddles on roof -->
+  <g fill="#3b82f6" opacity="0.55">
+    <ellipse cx="200" cy="150" rx="40" ry="9"/>
+    <ellipse cx="560" cy="148" rx="46" ry="10"/>
+  </g>
+  <!-- interior damp patches -->
+  <g fill="#93c5fd" opacity="0.45">
+    <ellipse cx="200" cy="300" rx="70" ry="50"/>
+    <ellipse cx="600" cy="340" rx="80" ry="55"/>
+  </g>
+  <!-- warning -->
+  <circle cx="400" cy="300" r="32" fill="#ef4444"/>
+  <text x="400" y="312" font-family="Arial" font-size="38" fill="#fff" text-anchor="middle" font-weight="bold">!</text>
+</svg>

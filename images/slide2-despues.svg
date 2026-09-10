@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8fafc"/>
+  <!-- building wall -->
+  <rect x="60" y="120" width="680" height="360" fill="#e2e8f0"/>
+  <!-- waterproofed membrane terraza -->
+  <rect x="60" y="100" width="680" height="60" fill="url(#mem)"/>
+  <defs>
+    <linearGradient id="mem" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#475569"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <rect x="60" y="100" width="680" height="12" fill="#1e293b"/>
+  <!-- smooth seam lines -->
+  <g stroke="#1e293b" stroke-width="2" opacity="0.5">
+    <line x1="220" y1="112" x2="220" y2="158"/>
+    <line x1="400" y1="112" x2="400" y2="158"/>
+    <line x1="580" y1="112" x2="580" y2="158"/>
+  </g>
+  <!-- clean interior -->
+  <rect x="120" y="200" width="180" height="240" fill="#f1f5f9"/>
+  <rect x="500" y="200" width="180" height="240" fill="#f1f5f9"/>
+  <!-- window -->
+  <rect x="360" y="240" width="80" height="160" rx="6" fill="#bae6fd" stroke="#94a3b8" stroke-width="5"/>
+  <!-- check -->
+  <circle cx="400" cy="300" r="30" fill="#22c55e"/>
+  <path d="M384 300 l11 12 l20 -24" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="470" font-family="Arial" font-size="22" fill="#15803d" text-anchor="middle" font-weight="bold">Terraza impermeabilizada</text>
+</svg>
