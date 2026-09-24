@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateWhatsApp(name) {
             const phone = this.params.get('t');
-            const phoneClean = phone ? phone.replace(/[\s\-()]/g, '') : '1158055802';
+            const phoneClean = phone ? phone.replace(/[\s\-()]/g, '') : '1167967633';
             const whatsappPhone = `549${phoneClean}`;
 
             const message = encodeURIComponent(
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ── CONTACT FORM → WHATSAPP ──────── */
     const contactForm = document.getElementById('contactForm');
-    const defaultWhatsappNumber = '5491158055802';
+    const defaultWhatsappNumber = '5491167967633';
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
