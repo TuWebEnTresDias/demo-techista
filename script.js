@@ -68,8 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update WhatsApp links with the name
             this.updateWhatsApp(value);
 
-            // Update meta description
-            this.updateMeta(value);
         },
 
         applyPhone(phone) {
@@ -92,9 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Update displayed phone numbers (text content)
             const displayPhone = cleanPhone.replace(/(\d{4})(\d{4})/, '$1-$2');
-            document.querySelectorAll('.emergency-bar__phone').forEach(el => {
-                el.textContent = `Llamar ahora: ${cleanPhone}`;
-            });
             document.querySelectorAll('.contact__detail a[href^="tel:"], .footer__col a[href^="tel:"]').forEach(el => {
                 el.textContent = displayPhone;
             });
@@ -118,33 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         },
 
-        updateMeta(name) {
-            const meta = document.querySelector('meta[name="description"]');
-            if (meta) {
-                meta.content = `${name} - Servicio profesional de techos. Emergencias, impermeabilización y reparación de cubiertas. Garantía en todos los trabajos.`;
-            }
-        }
     };
 
     Personalization.init();
 
 
-    /* ── EMERGENCY BAR ───────────────── */
-    const emergencyBar = document.getElementById('emergencyBar');
-
-    const handleEmergencyBar = () => {
-        if (window.scrollY > 100) {
-            emergencyBar.classList.add('hidden');
-        } else {
-            emergencyBar.classList.remove('hidden');
-        }
-    };
-
-    window.addEventListener('scroll', handleEmergencyBar, { passive: true });
-
-
     /* ── HEADER SCROLL EFFECT ─────────── */
     const header = document.getElementById('header');
+    const mobileMenu = document.getElementById('mobileMenu');
 
     const handleHeaderScroll = () => {
         if (window.scrollY > 60) {
@@ -160,23 +136,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ── MOBILE MENU ──────────────────── */
     const burger = document.getElementById('burgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
     const mobileLinks = mobileMenu.querySelectorAll('.mobile-menu__link');
 
-    const toggleMenu = () => {
-        burger.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    const setMenuOpen = (open) => {
+        burger.classList.toggle('active', open);
+        mobileMenu.classList.toggle('active', open);
+        burger.setAttribute('aria-expanded', String(open));
+        burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+        mobileMenu.toggleAttribute('inert', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
     };
 
-    const closeMenu = () => {
-        burger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = '';
-    };
+    const toggleMenu = () => setMenuOpen(burger.getAttribute('aria-expanded') !== 'true');
+    const closeMenu = () => setMenuOpen(false);
 
     burger.addEventListener('click', toggleMenu);
     mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
+            closeMenu();
+            burger.focus();
+        }
+    });
 
 
     /* ── SMOOTH SCROLL ─────────────────── */
@@ -190,32 +171,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             e.preventDefault();
             const headerHeight = header.offsetHeight;
-            const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
 
             window.scrollTo({
                 top: targetPosition,
-                behavior: 'smooth'
+                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
             });
         });
     });
-
-
-    /* ── SCROLL REVEAL ANIMATIONS ─────── */
-    const revealElements = document.querySelectorAll('.reveal');
-
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -40px 0px'
-    });
-
-    revealElements.forEach(el => revealObserver.observe(el));
 
 
     /* ── ANIMATED COUNTERS ────────────── */
@@ -254,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const countersSection = document.querySelector('.counters');
-    if (countersSection) {
+    if (countersSection && 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         const countersObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !countersAnimated) {
@@ -299,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const encodedMessage = encodeURIComponent(whatsappMessage);
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-            window.open(whatsappUrl, '_blank', 'noopener');
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 
             // Show feedback
             const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -371,6 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', highlightNav, { passive: true });
+    highlightNav();
 
 
     /* ── CURRENT YEAR ──────────────────── */
