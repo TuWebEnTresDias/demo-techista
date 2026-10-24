@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ── PERSONALIZATION ENGINE ──────── */
     const Personalization = {
-        // params: new URLSearchParams(window.location.search),
+        // params: new URLSearchParams(window.__DEMO_PARAMS__ ?? window.location.search),
 
         params: (() => {
 
             // First try current page URL
-            const local = new URLSearchParams(window.location.search);
+            const local = new URLSearchParams(window.__DEMO_PARAMS__ ?? window.location.search);
             if (local.toString()) return local;
 
             // Fallback: check parent window (iframe scenario)
@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })(),
 
         init() {
-            const rawName = this.params.get('n');
-            const rawCompany = this.params.get('e');
+            const rawName = this.params.get('n')?.trim().slice(0, 80);
+            const rawCompany = this.params.get('e')?.trim().slice(0, 80);
             const phone = this.params.get('t');
 
             const company = rawCompany ? `${rawCompany} | Techos` : null;
@@ -72,7 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         applyPhone(phone) {
             // Clean phone: remove spaces, dashes, parentheses
-            const cleanPhone = phone.replace(/[\s\-()]/g, '');
+            const normalized = window.SiteSecurity.normalizePhone(phone);
+            if (!normalized) return;
+            const cleanPhone = normalized.national;
 
             // tel: links → use raw phone (ej: tel:1155551234)
             document.querySelectorAll('a[href^="tel:"]').forEach(el => {
@@ -100,7 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateWhatsApp(name) {
             const phone = this.params.get('t');
-            const phoneClean = phone ? phone.replace(/[\s\-()]/g, '') : '1167967633';
+            const normalized = window.SiteSecurity.normalizePhone(phone ?? '1167967633');
+            const phoneClean = normalized?.national || '';
             const whatsappPhone = `549${phoneClean}`;
 
             const message = encodeURIComponent(
