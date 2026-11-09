@@ -380,3 +380,44 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(updateScroll); ticking = true; } }, { passive: true });
   updateScroll();
 });
+
+/* Scroll the roof cutaway through inspection, repair, and protection. */
+document.addEventListener('DOMContentLoaded', () => {
+  const story = document.querySelector('[data-roof-story]');
+  if (!story) return;
+  const scene = story.querySelector('.roof-story__visual');
+  const chapters = [...story.querySelectorAll('.roof-chapter')];
+  const counter = document.getElementById('roofStoryCounter');
+  const trace = story.querySelector('.roof-scene__trace');
+  const coat = story.querySelector('.roof-scene__coat');
+  let active = -1;
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const update = () => {
+    const rect = story.getBoundingClientRect();
+    const range = Math.max(1, story.offsetHeight - window.innerHeight);
+    const progress = clamp(-rect.top / range);
+    const chapterIndex = Math.min(2, Math.floor(progress * 3));
+    const chapterProgress = progress >= 1 ? 1 : progress * 3 - chapterIndex;
+    story.style.setProperty('--story-progress', progress.toFixed(4));
+    story.style.setProperty('--story-local', chapterProgress.toFixed(4));
+    story.style.setProperty('--story-scale', String(.86 + chapterProgress * .22));
+    story.style.setProperty('--story-shimmer', `${(progress * 100).toFixed(1)}%`);
+    const scan = story.querySelector('.roof-scene__scan');
+    if (scan) scan.setAttribute('transform', `translate(0 ${Math.round(chapterProgress * 150)})`);
+    scene.dataset.scene = String(chapterIndex);
+    if (trace) trace.style.strokeDashoffset = String(1 - (chapterIndex === 0 ? chapterProgress : 1));
+    if (coat) coat.style.strokeDashoffset = String(1 - (chapterIndex === 2 ? chapterProgress : 0));
+    if (active !== chapterIndex) {
+      chapters.forEach((chapter, index) => {
+        chapter.classList.toggle('is-active', index === chapterIndex);
+        if (index === chapterIndex) chapter.setAttribute('aria-current', 'step');
+        else chapter.removeAttribute('aria-current');
+      });
+      if (counter) counter.textContent = String(chapterIndex + 1);
+      active = chapterIndex;
+    }
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+});
