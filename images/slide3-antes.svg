@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f1f5f9"/>
+  <rect width="800" height="180" fill="#cbd5e1"/>
+  <!-- building -->
+  <rect x="80" y="200" width="640" height="280" fill="#e2e8f0"/>
+  <!-- old corrugated roof -->
+  <g>
+    <polygon points="40,210 760,210 720,120 80,120" fill="#a16207"/>
+    <!-- corrugation lines -->
+    <g stroke="#854d0e" stroke-width="4" opacity="0.6">
+      <line x1="120" y1="120" x2="120" y2="210"/>
+      <line x1="180" y1="120" x2="180" y2="210"/>
+      <line x1="240" y1="120" x2="240" y2="210"/>
+      <line x1="300" y1="120" x2="300" y2="210"/>
+      <line x1="360" y1="120" x2="360" y2="210"/>
+      <line x1="420" y1="120" x2="420" y2="210"/>
+      <line x1="480" y1="120" x2="480" y2="210"/>
+      <line x1="540" y1="120" x2="540" y2="210"/>
+      <line x1="600" y1="120" x2="600" y2="210"/>
+      <line x1="660" y1="120" x2="660" y2="210"/>
+    </g>
+    <!-- rust patches -->
+    <g fill="#7c2d12" opacity="0.6">
+      <ellipse cx="220" cy="165" rx="40" ry="20"/>
+      <ellipse cx="500" cy="150" rx="50" ry="22"/>
+      <ellipse cx="620" cy="180" rx="30" ry="16"/>
+    </g>
+    <!-- holes -->
+    <circle cx="360" cy="150" r="9" fill="#1f2937"/>
+    <circle cx="430" cy="185" r="7" fill="#1f2937"/>
+    <!-- sag -->
+    <path d="M40 210 q360 40 720 0" stroke="#713f12" stroke-width="3" fill="none" opacity="0.6"/>
+  </g>
+  <!-- warning -->
+  <circle cx="400" cy="330" r="32" fill="#ef4444"/>
+  <text x="400" y="342" font-family="Arial" font-size="38" fill="#fff" text-anchor="middle" font-weight="bold">!</text>
+</svg>

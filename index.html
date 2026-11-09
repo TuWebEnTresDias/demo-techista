@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-dynamic="title">Trabajos de techos de todo tipo</title>
+    <meta name="description" content="Servicio profesional de techista. Emergencias, impermeabilización, goteras y reparación de cubiertas. Garantía en todos los trabajos, respuesta rápida. Contactanos ahora.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+</head>
+<body>
+
+    <!-- ===== EMERGENCY BAR ===== -->
+    <div class="emergency-bar" id="emergencyBar">
+        <div class="emergency-bar__inner">
+            <span class="emergency-bar__pulse"></span>
+            <span class="emergency-bar__text">🚨 EMERGENCIAS</span>
+            <a href="tel:+5491158055802" class="emergency-bar__phone">Llamar ahora: 011 5805-5802</a>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="#hero" class="header__logo">
+                <span class="header__logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                </span>
+                <span class="header__logo-text" data-dynamic="logo">Techista</span>
+            </a>
+            <nav class="header__nav" id="mainNav">
+                <a href="#servicios" class="header__nav-link">Servicios</a>
+                <a href="#trabajos" class="header__nav-link">Trabajos</a>
+                <a href="#testimonios" class="header__nav-link">Reseñas</a>
+                <a href="#contacto" class="header__nav-link header__nav-link--cta">Contactar</a>
+            </nav>
+            <button class="header__burger" id="burgerBtn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-menu__nav">
+            <a href="#servicios" class="mobile-menu__link">Servicios</a>
+            <a href="#trabajos" class="mobile-menu__link">Trabajos</a>
+            <a href="#testimonios" class="mobile-menu__link">Reseñas</a>
+            <a href="#contacto" class="mobile-menu__link mobile-menu__link--cta">Contactar</a>
+        </nav>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero__bg">
+            <img class="hero__bg-img" src="./images/hero.svg" alt="Techista trabajando en un techo" loading="eager">
+        </div>
+        <div class="hero__overlay"></div>
+
+        <div class="hero__content">
+            <p class="hero__tagline">Emergencias · Respuesta inmediata</p>
+            <h1 class="hero__title">
+                <span class="hero__title-line" data-dynamic="name">Servicio de Techista</span>
+                <span class="hero__title-line hero__title-line--accent">Trabajos de techos de todo tipo</span>
+            </h1>
+            <p class="hero__subtitle">Atendemos emergencias y trabajos programados de techos y cubiertas.</p>
+            <div class="hero__cta">
+                <a href="tel:+5491158055802" class="btn btn--primary btn--glow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    Llamar Ahora
+                </a>
+                <a href="https://wa.me/5491158055802?text=Hola%2C%20necesito%20un%20techista"
+                   class="btn btn--outline"
+                   target="_blank"
+                   rel="noopener"
+                   data-whatsapp>
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    WhatsApp
+                </a>
+            </div>
+            <div class="hero__rating">
+                <span class="hero__rating-stars">★★★★★</span>
+                <span class="hero__rating-text">4.9 · 200+ reseñas en Google</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===== SERVICIOS ===== -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">¿Qué hacemos?</span>
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-subtitle">Soluciones completas para todo tipo de problemas de techos y cubiertas.</p>
+            </div>
+
+            <div class="services__list">
+
+                <div class="services__category reveal">
+                    <h3 class="services__category-title">Instalaciones</h3>
+                    <ul class="services__items">
+                        <li class="services__item">
+                            <span class="services__item-name">Colocación de techos nuevos</span>
+                            <span class="services__item-desc">Chapa, tejas o membrana. Instalación limpia y a medida.</span>
+                        </li>
+                        <li class="services__item">
+                            <span class="services__item-name">Instalación de canaletas</span>
+                            <span class="services__item-desc">Bajadas pluviales y canaletas para proteger la fachada.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="services__category reveal">
+                    <h3 class="services__category-title">Reparaciones</h3>
+                    <ul class="services__items">
+                        <li class="services__item">
+                            <span class="services__item-name">Reparación de goteras</span>
+                            <span class="services__item-desc">Detectamos y sellamos filtraciones en techos y terrazas.</span>
+                        </li>
+                        <li class="services__item">
+                            <span class="services__item-name">Reparación de estructuras</span>
+                            <span class="services__item-desc">Cabreadas y vigas dañadas por humedad o tormenta.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="services__category reveal">
+                    <h3 class="services__category-title">Impermeabilización</h3>
+                    <ul class="services__items">
+                        <li class="services__item">
+                            <span class="services__item-name">Impermeabilización de terrazas</span>
+                            <span class="services__item-desc">Membrana líquida o asfáltica, con garantía.</span>
+                        </li>
+                        <li class="services__item">
+                            <span class="services__item-name">Pintura antihumedad</span>
+                            <span class="services__item-desc">Protección de superficies contra filtraciones.</span>
+                        </li>
+                        <li class="services__item">
+                            <span class="services__item-name">Inspección con cámara</span>
+                            <span class="services__item-desc">Vemos el estado interior del techo sin romper.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="services__category reveal">
+                    <h3 class="services__category-title">Mantenimiento</h3>
+                    <ul class="services__items">
+                        <li class="services__item">
+                            <span class="services__item-name">Limpieza de canaletas</span>
+                            <span class="services__item-desc">Desobstrucción de canaletas y bajadas de lluvia.</span>
+                        </li>
+                        <li class="services__item">
+                            <span class="services__item-name">Retiro de ramas y escombros</span>
+                            <span class="services__item-desc">Sobre la cubierta, para evitar filtraciones.</span>
+                        </li>
+                        <li class="services__item">
+                            <span class="services__item-name">Revisión preventiva</span>
+                            <span class="services__item-desc">Control periódico antes de temporada de lluvias.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="services__cta reveal">
+                <p>¿No encontrás lo que necesitás? Consultanos.</p>
+                <a href="https://wa.me/5491158055802?text=Hola%2C%20tengo%20una%20consulta%20sobre%20un%20servicio%20de%20techos"
+                   class="btn btn--primary"
+                   target="_blank"
+                   rel="noopener"
+                   data-whatsapp>
+                    Consultar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COUNTERS ===== -->
+    <section class="counters" id="counters">
+        <div class="container">
+            <div class="counters__grid">
+                <div class="counter reveal">
+                    <span class="counter__number" data-target="500" data-suffix="+">0</span>
+                    <span class="counter__label">Trabajos realizados</span>
+                </div>
+                <div class="counter reveal">
+                    <span class="counter__number" data-target="15" data-suffix="+">0</span>
+                    <span class="counter__label">Años de experiencia</span>
+                </div>
+                <div class="counter reveal">
+                    <span class="counter__number" data-target="4.9">0</span>
+                    <span class="counter__label">★ Calificación Google</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DIFERENCIALES ===== -->
+    <section class="differentials" id="diferenciales">
+        <div class="container">
+            <div class="differentials__grid">
+
+                <div class="differential reveal">
+                    <div class="differential__icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="24" cy="24" r="20"/>
+                            <path d="M24 12v12l8 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="differential__title">Emergencias</h3>
+                    <p class="differential__text">Roturas, filtraciones y emergencias. Llamanos y te atendemos a la brevedad.</p>
+                </div>
+
+                <div class="differential reveal">
+                    <div class="differential__icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 8H8v12"/>
+                            <path d="M28 40h12V28"/>
+                            <path d="M40 8L28 20"/>
+                            <path d="M8 40l12-12"/>
+                        </svg>
+                    </div>
+                    <h3 class="differential__title">Con garantía</h3>
+                    <p class="differential__text">Todos nuestros trabajos tienen garantía. Si no quedás conforme, volvemos sin costo adicional.</p>
+                </div>
+
+                <div class="differential reveal">
+                    <div class="differential__icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 4C14 4 6 12 6 22c0 8 6 15 14 18v4h8v-4c8-3 14-10 14-18C42 12 34 4 24 4z"/>
+                            <path d="M18 22l4 4 8-8"/>
+                        </svg>
+                    </div>
+                    <h3 class="differential__title">Presupuesto Gratis</h3>
+                    <p class="differential__text">Sin compromiso. Te decimos el costo antes de empezar. Sin sorpresas ni gastos ocultos.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRABAJOS (GALLERY) ===== -->
+    <section class="gallery" id="trabajos">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Nuestros trabajos</span>
+                <h2 class="section-title">Antes y Después</h2>
+                <p class="section-subtitle">Así quedan nuestros trabajos. Cada imagen es un problema resuelto.</p>
+            </div>
+
+            <div class="gallery__grid reveal">
+                <div class="gallery__item">
+                    <div class="gallery__pair">
+                        <div class="gallery__photo">
+                            <img src="./images/slide1-antes.svg" alt="Techo con gotera y humedad" loading="lazy">
+                            <span class="gallery__label">Antes</span>
+                        </div>
+                        <div class="gallery__photo">
+                            <img src="./images/slide1-despues.svg" alt="Techo reparado sin filtraciones" loading="lazy">
+                            <span class="gallery__label">Después</span>
+                        </div>
+                    </div>
+                    <p class="gallery__caption">Reparación de gotera — Caballito</p>
+                </div>
+
+                <div class="gallery__item">
+                    <div class="gallery__pair">
+                        <div class="gallery__photo">
+                            <img src="./images/slide2-antes.svg" alt="Terraza con humedad y fisuras" loading="lazy">
+                            <span class="gallery__label">Antes</span>
+                        </div>
+                        <div class="gallery__photo">
+                            <img src="./images/slide2-despues.svg" alt="Terraza impermeabilizada" loading="lazy">
+                            <span class="gallery__label">Después</span>
+                        </div>
+                    </div>
+                    <p class="gallery__caption">Impermeabilización de terraza — Palermo</p>
+                </div>
+
+                <div class="gallery__item">
+                    <div class="gallery__pair">
+                        <div class="gallery__photo">
+                            <img src="./images/slide3-antes.svg" alt="Cubierta de chapa oxidada y con huecos" loading="lazy">
+                            <span class="gallery__label">Antes</span>
+                        </div>
+                        <div class="gallery__photo">
+                            <img src="./images/slide3-despues.svg" alt="Cubierta de chapa nueva" loading="lazy">
+                            <span class="gallery__label">Después</span>
+                        </div>
+                    </div>
+                    <p class="gallery__caption">Cambio de cubierta de chapa — Belgrano</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COVERAGE MAP ===== -->
+    <section class="coverage" id="cobertura">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">¿Dónde trabajamos?</span>
+                <h2 class="section-title">Zona de Cobertura</h2>
+                <p class="section-subtitle">Atendemos Capital Federal y Gran Buenos Aires.</p>
+            </div>
+            <div class="coverage__cards reveal">
+                <div class="coverage__card">
+                    <h3 class="coverage__card-title">Capital Federal</h3>
+                    <p class="coverage__card-text">Todos los barrios</p>
+                </div>
+                <div class="coverage__card">
+                    <h3 class="coverage__card-title">Zona Norte</h3>
+                    <p class="coverage__card-text">San Isidro, Vicente López, Tigre</p>
+                </div>
+                <div class="coverage__card">
+                    <h3 class="coverage__card-title">GBA Oeste</h3>
+                    <p class="coverage__card-text">Morón, Haedo, Ituzaingó</p>
+                </div>
+                <div class="coverage__card">
+                    <h3 class="coverage__card-title">Zona Sur</h3>
+                    <p class="coverage__card-text">Lanús, Avellaneda, Quilmes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIOS ===== -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Lo que dicen</span>
+                <h2 class="section-title">Reseñas de Clientes</h2>
+                <div class="testimonials__rating">
+                    <span class="testimonials__rating-num">4.9</span>
+                    <div class="testimonials__stars-wrap">
+                        <div class="testimonials__stars">★★★★★</div>
+                        <span class="testimonials__rating-count">basado en 200+ reseñas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__grid">
+                <div class="testimonial reveal">
+                    <div class="testimonial__header">
+                        <img class="testimonial__avatar" src="./images/avatar-1.svg" alt="María G." loading="lazy">
+                        <div>
+                            <h4 class="testimonial__name">María G.</h4>
+                            <span class="testimonial__location">📍 Caballito</span>
+                        </div>
+                    </div>
+                    <div class="testimonial__stars">★★★★★</div>
+                    <p class="testimonial__text">"Se nos filtraba el techo a las 3 de la madrugada con la lluvia. Llamé y en 20 minutos ya estaba el techista. Solucionó la gotera rapido y el precio fue justo. ¡Totalmente recomendable!"</p>
+                </div>
+                <div class="testimonial reveal">
+                    <div class="testimonial__header">
+                        <img class="testimonial__avatar" src="./images/avatar-2.svg" alt="Carlos L." loading="lazy">
+                        <div>
+                            <h4 class="testimonial__name">Carlos L.</h4>
+                            <span class="testimonial__location">📍 Belgrano</span>
+                        </div>
+                    </div>
+                    <div class="testimonial__stars">★★★★★</div>
+                    <p class="testimonial__text">"Me cambiaron toda la cubierta de chapa en el departamento. Trabajo impecable, cumplidores y puntuales. Los mejores techistas que encontré."</p>
+                </div>
+                <div class="testimonial reveal">
+                    <div class="testimonial__header">
+                        <img class="testimonial__avatar" src="./images/avatar-3.svg" alt="Ana R." loading="lazy">
+                        <div>
+                            <h4 class="testimonial__name">Ana R.</h4>
+                            <span class="testimonial__location">📍 Palermo</span>
+                        </div>
+                    </div>
+                    <div class="testimonial__stars">★★★★★</div>
+                    <p class="testimonial__text">"Impermeabilizaron toda la terraza de mi casa. Trabajo impecable, limpio y dejaron todo funcionando a la perfección. El presupuesto fue exacto, sin sorpresas."</p>
+                </div>
+                <div class="testimonial reveal">
+                    <div class="testimonial__header">
+                        <img class="testimonial__avatar" src="./images/avatar-4.svg" alt="Jorge M." loading="lazy">
+                        <div>
+                            <h4 class="testimonial__name">Jorge M.</h4>
+                            <span class="testimonial__location">📍 San Isidro</span>
+                        </div>
+                    </div>
+                    <div class="testimonial__stars">★★★★☆</div>
+                    <p class="testimonial__text">"Tenía una filtración en el techo que no me la podía encontrar nadie. Ellos vinieron con la cámara, detectaron el problema y lo solucionaron el mismo día. Muy profesionales."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact__grid">
+                <div class="contact__info reveal">
+                    <span class="section-tag">Contactanos</span>
+                    <h2 class="section-title section-title--left">¿Necesitás un techista?</h2>
+                    <p>Completá el formulario y te contactamos a la brevedad. Para emergencias, llamanos directamente.</p>
+
+                    <div class="contact__details">
+                        <div class="contact__detail">
+                            <span class="contact__detail-label">Teléfono</span>
+                            <a href="tel:+5491158055802">011 5805-5802</a>
+                        </div>
+                        <div class="contact__detail">
+                            <span class="contact__detail-label">WhatsApp</span>
+                            <a href="https://wa.me/5491158055802?text=Hola%2C%20tengo%20una%20consulta" target="_blank" rel="noopener" data-whatsapp>Enviar mensaje</a>
+                        </div>
+                        <div class="contact__detail">
+                            <span class="contact__detail-label">Zona de cobertura</span>
+                            <span>Capital Federal y GBA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__form-wrap reveal">
+                    <form class="contact__form" id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Nombre</label>
+                            <input type="text" id="contactName" name="name" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Teléfono</label>
+                            <input type="tel" id="contactPhone" name="phone" required placeholder="Ej: 11 5555-1234">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Mensaje <span class="form-optional">(opcional)</span></label>
+                            <textarea id="contactMessage" name="message" rows="3" placeholder="Contanos brevemente tu problema"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--whatsapp btn--full btn--ripple">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            Enviar por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <span class="footer__logo" data-dynamic="footer-name">Techista</span>
+                    <p class="footer__tagline">Servicio profesional de techos. Emergencias.</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Servicios</h4>
+                    <p>Reparaciones</p>
+                    <p>Impermeabilización</p>
+                    <p>Instalaciones</p>
+                    <p>Mantenimiento</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Cobertura</h4>
+                    <p>Capital Federal</p>
+                    <p>Gran Buenos Aires</p>
+                    <p>Zona Norte</p>
+                    <p>Zona Sur</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Contacto</h4>
+                    <p><a href="tel:+5491158055802">011 5805-5802</a></p>
+                    <p>Emergencias</p>
+                    <a href="https://wa.me/5491158055802?text=Hola%2C%20tengo%20una%20consulta"
+                       class="btn btn--primary btn--sm"
+                       target="_blank"
+                       rel="noopener"
+                       data-whatsapp>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="currentYear"></span> <span data-dynamic="footer-name">Techista</span>. Todos los derechos reservados.</p>
+                <a href="https://tuweben3dias.com" target="_blank" rel="noopener" class="footer__credit">tuweben3dias.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/5491158055802?text=Hola%2C%20quiero%20hacer%20una%20consulta%20de%20techos"
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener"
+       aria-label="Contactar por WhatsApp"
+       id="whatsappFloat"
+       data-whatsapp>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- ===== MOBILE STICKY CTA ===== -->
+    <div class="mobile-cta" id="mobileCta">
+        <a href="tel:+5491158055802" class="mobile-cta__btn mobile-cta__btn--call">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Llamar
+        </a>
+        <a href="https://wa.me/5491158055802?text=Hola%2C%20necesito%20un%20techista"
+           class="mobile-cta__btn mobile-cta__btn--whatsapp"
+           target="_blank"
+           rel="noopener"
+           data-whatsapp>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            WhatsApp
+        </a>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
