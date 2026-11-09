@@ -388,8 +388,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const scene = story.querySelector('.roof-story__visual');
   const chapters = [...story.querySelectorAll('.roof-chapter')];
   const counter = document.getElementById('roofStoryCounter');
-  const trace = story.querySelector('.roof-scene__trace');
-  const coat = story.querySelector('.roof-scene__coat');
+  const photo = story.querySelector('.roof-scene__gif');
+  const status = document.getElementById('roofSceneStatus');
+  const sceneCount = document.getElementById('roofSceneCount');
+  const statuses = ['DIAGNÓSTICO EN CURSO', 'REPARACIÓN EN CURSO', 'PROTECCIÓN APLICADA'];
   let active = -1;
   const clamp = value => Math.max(0, Math.min(1, value));
   const update = () => {
@@ -402,11 +404,9 @@ document.addEventListener('DOMContentLoaded', () => {
     story.style.setProperty('--story-local', chapterProgress.toFixed(4));
     story.style.setProperty('--story-scale', String(.86 + chapterProgress * .22));
     story.style.setProperty('--story-shimmer', `${(progress * 100).toFixed(1)}%`);
-    const scan = story.querySelector('.roof-scene__scan');
-    if (scan) scan.setAttribute('transform', `translate(0 ${Math.round(chapterProgress * 150)})`);
+    story.style.setProperty('--scan-position', `${16 + chapterProgress * 67}%`);
     scene.dataset.scene = String(chapterIndex);
-    if (trace) trace.style.strokeDashoffset = String(1 - (chapterIndex === 0 ? chapterProgress : 1));
-    if (coat) coat.style.strokeDashoffset = String(1 - (chapterIndex === 2 ? chapterProgress : 0));
+    if (photo) photo.style.transform = `scale(${1.02 + progress * .065}) translate3d(${(progress - .5) * -18}px, ${(progress - .5) * -8}px, 0)`;
     if (active !== chapterIndex) {
       chapters.forEach((chapter, index) => {
         chapter.classList.toggle('is-active', index === chapterIndex);
@@ -414,6 +414,8 @@ document.addEventListener('DOMContentLoaded', () => {
         else chapter.removeAttribute('aria-current');
       });
       if (counter) counter.textContent = String(chapterIndex + 1);
+      if (status) status.textContent = statuses[chapterIndex];
+      if (sceneCount) sceneCount.textContent = `0${chapterIndex + 1} — 03`;
       active = chapterIndex;
     }
   };

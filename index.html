@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Techista | Trabajos de techos de todo tipo">
   <meta property="og:description" content="Trabajos de techos y cubiertas en Capital Federal y GBA.">
-  <meta property="og:image" content="./images/hero.svg">
+  <meta property="og:image" content="https://tuweben3dias.github.io/demo-techista-pro/images/roof-repair-still.jpg">
   <title data-dynamic="title">Trabajos de techos de todo tipo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,27 +32,16 @@
   <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
   <main>
     <section class="hero" id="hero" aria-labelledby="heroTitle">
-      <div class="hero__bg" aria-hidden="true"><img class="hero__bg-img" src="./images/hero.svg" alt="" fetchpriority="high"></div>
+      <div class="hero__bg" aria-hidden="true"></div>
       <div class="hero__content"><p class="hero__tagline">Trabajos programados</p><h1 class="hero__title" id="heroTitle"><span class="hero__title-line" data-dynamic="name">Servicio de Techista</span><span class="hero__title-line--accent">Trabajos de techos de todo tipo</span></h1><p class="hero-contact"><span>Contacto directo</span><a data-phone-display href="tel:+5491167967633">+54 9 11 6796-7633</a></p><p class="hero__subtitle">Trabajos de techos y cubiertas en Capital Federal y Gran Buenos Aires.</p><div class="hero__cta"><a href="tel:+5491167967633" class="btn btn--primary">Llamar ahora</a><a href="https://wa.me/5491167967633?text=Hola%2C%20necesito%20un%20techista" class="btn btn--outline" target="_blank" rel="noopener noreferrer" data-whatsapp>Consultar por WhatsApp</a></div><div class="hero__rating"><span class="hero__rating-stars" aria-label="5 estrellas">★★★★★</span><span class="hero__rating-text">4.9 · 200+ reseñas en Google</span></div></div>
       <div class="hero-art" aria-hidden="true">
-        <div class="hero-art__halo"></div>
-        <svg class="hero-art__roof" viewBox="0 0 620 520" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs><linearGradient id="roofGlow" x1="130" y1="90" x2="470" y2="420" gradientUnits="userSpaceOnUse"><stop stop-color="#ffd18c"/><stop offset="1" stop-color="#e77c45"/></linearGradient><filter id="soft"><feGaussianBlur stdDeviation="22"/></filter></defs>
-          <circle cx="342" cy="250" r="190" fill="#E77C45" opacity=".14" filter="url(#soft)"/>
-          <path d="M96 246 306 86l218 160" stroke="url(#roofGlow)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M145 233v192h320V233" stroke="#F6E6D1" stroke-opacity=".82" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M198 425V303h82v122M330 290h87v72h-87z" stroke="#F6E6D1" stroke-opacity=".7" stroke-width="8" stroke-linejoin="round"/>
-          <path d="m174 214 132-99 138 101M192 240l116-88 122 90M210 266l98-74 104 76" stroke="#fff2df" stroke-opacity=".28" stroke-width="3"/>
-          <path d="M472 235h44v18h-44" stroke="#e77c45" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M500 254v165" stroke="#e77c45" stroke-width="8" stroke-linecap="round"/>
-          <path d="m488 391 12 18 12-18" stroke="#e77c45" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="306" cy="86" r="12" fill="#fff2df"/><circle cx="306" cy="86" r="25" stroke="#fff2df" stroke-opacity=".35"/>
-          <path d="M72 365h90M72 383h62" stroke="#fff2df" stroke-opacity=".26" stroke-width="4" stroke-linecap="round"/>
-          <path d="M471 128h76M509 90v76" stroke="#fff2df" stroke-opacity=".26" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-        <div class="hero-float hero-float--inspection"><span class="hero-float__pulse"></span><span><strong>Inspección</strong><small>Diagnóstico preciso</small></span><b>01</b></div>
-        <div class="hero-float hero-float--weather"><span class="hero-float__icon">↗</span><span><strong>Protección total</strong><small>Sellado · cubierta · desagüe</small></span></div>
-        <span class="hero-art__orbit hero-art__orbit--one"></span><span class="hero-art__orbit hero-art__orbit--two"></span>
+        <figure class="hero-photo">
+          <img src="./images/roof-repair-still.jpg" alt="" fetchpriority="high">
+          <div class="hero-photo__wash"></div>
+          <span class="hero-photo__index">01 <i></i> CUBIERTAS</span>
+          <div class="hero-photo__caption"><span>BUENOS AIRES <i>·</i> TRABAJO EN ALTURA</span><b>Un techo,<br>bien resuelto.</b></div>
+          <span class="hero-photo__corner hero-photo__corner--tl"></span><span class="hero-photo__corner hero-photo__corner--br"></span>
+        </figure>
       </div>
       <div class="hero__proof">Soluciones para techos y cubiertas<small>Capital Federal y Gran Buenos Aires</small></div>
     </section>
@@ -64,49 +53,22 @@
           <h2 id="roofStoryTitle">De la primera gota<br><em>a la última.</em></h2>
           <p class="roof-story__intro">Cada techo tiene su historia. Así la recorremos, paso a paso, hasta dejarlo protegido.</p>
           <div class="roof-story__chapters" aria-label="Etapas del trabajo">
-            <article class="roof-chapter is-active" data-chapter="0" aria-current="step"><span class="roof-chapter__num">01</span><div><h3>Encontramos el origen</h3><p>Revisamos pendientes, uniones y desagües. La humedad marca el camino.</p></div><span class="roof-chapter__state">DIAGNÓSTICO</span></article>
-            <article class="roof-chapter" data-chapter="1"><span class="roof-chapter__num">02</span><div><h3>Resolvemos el punto débil</h3><p>Reparamos la zona afectada con materiales elegidos para esa cubierta.</p></div><span class="roof-chapter__state">REPARACIÓN</span></article>
-            <article class="roof-chapter" data-chapter="2"><span class="roof-chapter__num">03</span><div><h3>Sellamos para lo que viene</h3><p>Una terminación impermeable protege el trabajo y alarga la vida del techo.</p></div><span class="roof-chapter__state">PROTECCIÓN</span></article>
+            <article class="roof-chapter is-active" data-chapter="0" aria-current="step"><span class="roof-chapter__num">01</span><div><h3>Encontramos el origen</h3><p>Revisamos pendientes, uniones y desagües. La humedad marca el camino.</p></div></article>
+            <article class="roof-chapter" data-chapter="1"><span class="roof-chapter__num">02</span><div><h3>Resolvemos el punto débil</h3><p>Reparamos la zona afectada con materiales elegidos para esa cubierta.</p></div></article>
+            <article class="roof-chapter" data-chapter="2"><span class="roof-chapter__num">03</span><div><h3>Sellamos para lo que viene</h3><p>Una terminación impermeable protege el trabajo y alarga la vida del techo.</p></div></article>
           </div>
           <div class="roof-story__progress"><span><i></i></span><small>DESLIZÁ PARA RECORRER</small><b>0<span id="roofStoryCounter">1</span> / 03</b></div>
         </div>
-        <div class="roof-story__visual" data-scene="0" aria-hidden="true">
-          <div class="roof-scene__topline"><span>ANATOMÍA DEL TECHO</span><span class="roof-scene__live"><i></i> VISTA EN CORTE</span></div>
-          <div class="roof-scene__canvas">
-            <div class="roof-scene__glow"></div>
-            <svg class="roof-scene__svg" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="roofSurface" x1="180" y1="180" x2="590" y2="390" gradientUnits="userSpaceOnUse"><stop stop-color="#f5b47e"/><stop offset="1" stop-color="#c55d37"/></linearGradient>
-                <linearGradient id="sealGlow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f6bd7f" stop-opacity="0"/><stop offset=".5" stop-color="#fff0c8"/><stop offset="1" stop-color="#f6bd7f" stop-opacity="0"/></linearGradient>
-                <linearGradient id="coatGlow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f6bd7f"/><stop offset=".5" stop-color="#fff1c7"/><stop offset="1" stop-color="#f6bd7f"/></linearGradient>
-                <pattern id="sceneGrid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#dbe3d8" stroke-opacity=".06"/></pattern>
-                <filter id="sceneBlur"><feGaussianBlur stdDeviation="28"/></filter>
-              </defs>
-              <rect width="800" height="600" fill="url(#sceneGrid)"/>
-              <circle cx="427" cy="300" r="205" fill="#e8794d" opacity=".11" filter="url(#sceneBlur)"/>
-              <path d="M112 459h580" stroke="#f4eee3" stroke-opacity=".24" stroke-width="2" stroke-dasharray="5 9"/>
-              <path d="M190 455V321l210-166 210 166v134" stroke="#ece5d9" stroke-opacity=".48" stroke-width="7" stroke-linejoin="round"/>
-              <path d="M142 327 400 116l259 211-26 24-233-189-233 189-25-24Z" fill="url(#roofSurface)" stroke="#ffe2bd" stroke-opacity=".78" stroke-width="3"/>
-              <path d="m190 327 210-171 210 171M216 348l184-150 185 150M246 368l154-126 155 126" stroke="#7e3c2c" stroke-opacity=".42" stroke-width="3"/>
-              <path d="M400 156v211M355 193l89 72M312 227l177 143M269 263l134 107" stroke="#fff0dc" stroke-opacity=".3" stroke-width="2"/>
-              <path d="M257 455V349h90v106M455 356h88v72h-88z" stroke="#e9dfd0" stroke-opacity=".36" stroke-width="5"/>
-              <path d="M142 327 400 116l259 211" class="roof-scene__trace" pathLength="1"/>
-              <path d="M142 327 400 116l259 211" class="roof-scene__coat" pathLength="1"/>
-              <path d="M143 327 170 350M657 327l26 22v88" stroke="#e88250" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M666 458v-40" stroke="#e88250" stroke-width="7" stroke-linecap="round"/>
-              <circle cx="400" cy="116" r="7" fill="#fff4dd"/>
-              <g class="roof-scene__scan"><path d="M115 265H685" stroke="#9edcb6" stroke-opacity=".85" stroke-width="2" stroke-dasharray="7 8"/><path d="M115 265H685v24H115z" fill="#9edcb6" fill-opacity=".08"/><circle cx="400" cy="265" r="6" fill="#a4e7bc"/><circle cx="400" cy="265" r="15" stroke="#a4e7bc" stroke-opacity=".5"/></g>
-              <g class="roof-scene__seal"><circle cx="510" cy="205" r="30" fill="#f4a16b" fill-opacity=".18"/><circle cx="510" cy="205" r="15" fill="#f4a16b"/><path d="m503 205 5 5 10-11" stroke="#19251f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
-              <g class="roof-scene__rain"><path d="m285 93-7 18M340 61l-7 18M507 73l-7 18M573 118l-7 18" stroke="#a8d7e4" stroke-width="4" stroke-linecap="round"/><path d="m311 120-5 13M548 163l-5 13" stroke="#a8d7e4" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/></g>
-              <g class="roof-scene__shield"><path d="M400 71c-22 16-42 20-59 20v37c0 33 22 56 59 72 37-16 59-39 59-72V91c-17 0-37-4-59-20Z" fill="#a7dcba" fill-opacity=".15" stroke="#b5ebc8" stroke-width="3"/><path d="m378 128 15 15 31-34" stroke="#c8f1d4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
-            </svg>
-            <div class="roof-scene__label roof-scene__label--a"><i></i><span>LECTURA DE PENDIENTE</span></div>
-            <div class="roof-scene__label roof-scene__label--b"><i></i><span>UNIÓN CRÍTICA</span></div>
-            <div class="roof-scene__label roof-scene__label--c"><i></i><span>CAPA IMPERMEABLE</span></div>
-            <div class="roof-scene__coordinate">34°36' S&nbsp; 58°22' O</div>
-          </div>
-          <div class="roof-scene__footer"><span>DETALLE CONSTRUCTIVO <b>·</b> CUBIERTA INCLINADA</span><span class="roof-scene__scale"><i></i><i></i><i></i><i></i><i></i></span></div>
-        </div>
+        <figure class="roof-story__visual" data-scene="0" aria-label="Techista reparando una cubierta de chapa al atardecer">
+          <img class="roof-scene__gif" src="./images/roof-repair-motion.gif" alt="" loading="lazy" fetchpriority="low">
+          <div class="roof-scene__shade"></div><div class="roof-scene__scan-beam"></div>
+          <div class="roof-scene__topline"><span>TRABAJO EN CUBIERTA <b>·</b> BUENOS AIRES</span><span class="roof-scene__live"><i></i> <span id="roofSceneStatus">DIAGNÓSTICO EN CURSO</span></span></div>
+          <div class="roof-scene__tag roof-scene__tag--inspect"><i></i><span>01 / LECTURA DE CUBIERTA</span></div>
+          <div class="roof-scene__tag roof-scene__tag--repair"><i></i><span>02 / REPARACIÓN PRECISA</span></div>
+          <div class="roof-scene__tag roof-scene__tag--protect"><i></i><span>03 / TECHO PROTEGIDO</span></div>
+          <figcaption class="roof-scene__bottom"><span>UN BUEN TRABAJO EMPIEZA POR MIRAR DE CERCA.</span><span class="roof-scene__count" id="roofSceneCount">01 — 03</span></figcaption>
+          <span class="roof-scene__corner roof-scene__corner--tl"></span><span class="roof-scene__corner roof-scene__corner--br"></span>
+        </figure>
       </div>
     </section>
 
