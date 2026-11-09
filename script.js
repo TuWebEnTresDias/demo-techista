@@ -349,3 +349,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+/* Scroll linked atmosphere: reading progress, parallax artwork and subtle reveals. */
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+  const progress = document.getElementById('scrollProgress');
+  const art = document.querySelector('.hero-art');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealTargets = document.querySelectorAll('.section-header,.services__category,.counter,.differential,.gallery__item,.coverage__card,.testimonial,.contact__info,.contact__form-wrap');
+  if ('IntersectionObserver' in window && !reduce) {
+    root.classList.add('js-motion');
+    revealTargets.forEach(node => node.classList.add('reveal'));
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    }), { threshold: .12, rootMargin: '0px 0px -35px 0px' });
+    revealTargets.forEach(node => observer.observe(node));
+  }
+  let ticking = false;
+  const updateScroll = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (progress) progress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+    if (art && !reduce && window.innerWidth > 700) {
+      const travel = Math.min(window.scrollY, window.innerHeight * 1.15);
+      art.style.setProperty('--scroll-y', `${travel * .12}px`);
+      art.style.translate = `0 calc(-45% + ${travel * .12}px)`;
+      art.style.opacity = String(Math.max(.12, 1 - travel / (window.innerHeight * 1.4)));
+    }
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(updateScroll); ticking = true; } }, { passive: true });
+  updateScroll();
+});

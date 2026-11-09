@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Techista | Trabajos de techos de todo tipo">
   <meta property="og:description" content="Trabajos de techos y cubiertas en Capital Federal y GBA.">
-  <meta property="og:image" content="https://acrobatica.es/app/uploads/2024/07/impermeabilizacion-de-techos-2.jpg">
+  <meta property="og:image" content="./images/hero.svg">
   <title data-dynamic="title">Trabajos de techos de todo tipo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,10 +29,31 @@
   <noscript><style>@media(max-width:700px){.header__nav{display:flex!important;position:fixed;z-index:21;top:var(--header);left:0;right:0;padding:12px 22px;background:#fffefa;flex-wrap:wrap;justify-content:center}.header__burger{display:none!important}.mobile-menu{display:none!important}}</style></noscript>
   <div class="mobile-menu" id="mobileMenu" inert><nav class="mobile-menu__nav" aria-label="Navegación móvil"><a href="#servicios" class="mobile-menu__link">Servicios</a><a href="#trabajos" class="mobile-menu__link">Trabajos</a><a href="#testimonios" class="mobile-menu__link">Reseñas</a><a href="#contacto" class="mobile-menu__link mobile-menu__link--cta">Contactar</a></nav></div>
 
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
   <main>
     <section class="hero" id="hero" aria-labelledby="heroTitle">
-      <div class="hero__bg" aria-hidden="true"><img class="hero__bg-img" src="https://acrobatica.es/app/uploads/2024/07/impermeabilizacion-de-techos-2.jpg" alt="" fetchpriority="high"></div>
+      <div class="hero__bg" aria-hidden="true"><img class="hero__bg-img" src="./images/hero.svg" alt="" fetchpriority="high"></div>
       <div class="hero__content"><p class="hero__tagline">Trabajos programados</p><h1 class="hero__title" id="heroTitle"><span class="hero__title-line" data-dynamic="name">Servicio de Techista</span><span class="hero__title-line--accent">Trabajos de techos de todo tipo</span></h1><p class="hero-contact"><span>Contacto directo</span><a data-phone-display href="tel:+5491167967633">+54 9 11 6796-7633</a></p><p class="hero__subtitle">Trabajos de techos y cubiertas en Capital Federal y Gran Buenos Aires.</p><div class="hero__cta"><a href="tel:+5491167967633" class="btn btn--primary">Llamar ahora</a><a href="https://wa.me/5491167967633?text=Hola%2C%20necesito%20un%20techista" class="btn btn--outline" target="_blank" rel="noopener noreferrer" data-whatsapp>Consultar por WhatsApp</a></div><div class="hero__rating"><span class="hero__rating-stars" aria-label="5 estrellas">★★★★★</span><span class="hero__rating-text">4.9 · 200+ reseñas en Google</span></div></div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-art__halo"></div>
+        <svg class="hero-art__roof" viewBox="0 0 620 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="roofGlow" x1="130" y1="90" x2="470" y2="420" gradientUnits="userSpaceOnUse"><stop stop-color="#ffd18c"/><stop offset="1" stop-color="#e77c45"/></linearGradient><filter id="soft"><feGaussianBlur stdDeviation="22"/></filter></defs>
+          <circle cx="342" cy="250" r="190" fill="#E77C45" opacity=".14" filter="url(#soft)"/>
+          <path d="M96 246 306 86l218 160" stroke="url(#roofGlow)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M145 233v192h320V233" stroke="#F6E6D1" stroke-opacity=".82" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M198 425V303h82v122M330 290h87v72h-87z" stroke="#F6E6D1" stroke-opacity=".7" stroke-width="8" stroke-linejoin="round"/>
+          <path d="m174 214 132-99 138 101M192 240l116-88 122 90M210 266l98-74 104 76" stroke="#fff2df" stroke-opacity=".28" stroke-width="3"/>
+          <path d="M472 235h44v18h-44" stroke="#e77c45" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M500 254v165" stroke="#e77c45" stroke-width="8" stroke-linecap="round"/>
+          <path d="m488 391 12 18 12-18" stroke="#e77c45" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="306" cy="86" r="12" fill="#fff2df"/><circle cx="306" cy="86" r="25" stroke="#fff2df" stroke-opacity=".35"/>
+          <path d="M72 365h90M72 383h62" stroke="#fff2df" stroke-opacity=".26" stroke-width="4" stroke-linecap="round"/>
+          <path d="M471 128h76M509 90v76" stroke="#fff2df" stroke-opacity=".26" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="hero-float hero-float--inspection"><span class="hero-float__pulse"></span><span><strong>Inspección</strong><small>Diagnóstico preciso</small></span><b>01</b></div>
+        <div class="hero-float hero-float--weather"><span class="hero-float__icon">↗</span><span><strong>Protección total</strong><small>Sellado · cubierta · desagüe</small></span></div>
+        <span class="hero-art__orbit hero-art__orbit--one"></span><span class="hero-art__orbit hero-art__orbit--two"></span>
+      </div>
       <div class="hero__proof">Soluciones para techos y cubiertas<small>Capital Federal y Gran Buenos Aires</small></div>
     </section>
 
@@ -53,9 +74,9 @@
     </div></div></section>
 
     <section class="gallery" id="trabajos" aria-labelledby="galleryTitle"><div class="container"><header class="section-header"><span class="section-tag">Techos y cubiertas</span><h2 class="section-title" id="galleryTitle">El trabajo, a la vista</h2><p class="section-subtitle">Algunas imágenes de trabajos y tareas habituales en techos.</p></header><div class="gallery__grid">
-      <article class="gallery__item gallery__item--wide"><div class="gallery__pair"><div class="gallery__photo"><img src="https://www.abcsupply.com/wp-content/uploads/2021/09/Gutters-1440x400-1.jpg" alt="Instalación de canaleta pluvial en el borde de un techo" loading="lazy"><span class="gallery__label">Canaletas</span></div></div><p class="gallery__caption">Canaletas y desagües <span>Protección frente al agua de lluvia</span></p></article>
-       <article class="gallery__item gallery__item--roof"><div class="gallery__pair"><div class="gallery__photo"><img src="https://www.techistaconstrucciones.com/wp-content/uploads/2024/07/techista-construcciones-expetos-en-techos-techos5-533x400.jpg" alt="Cubierta de techo en una obra de construcción" loading="lazy"><span class="gallery__label">Cubiertas</span></div></div><p class="gallery__caption">Instalación y reparación de techos</p></article>
-      <article class="gallery__item"><div class="gallery__pair"><div class="gallery__photo"><img src="https://homesolution.net/blog/wp-content/uploads/2020/08/33440940976_517cb3a532_k-1024x576.jpg" alt="Detalle de tareas de impermeabilización en una cubierta" loading="lazy"><span class="gallery__label">Impermeabilización</span></div></div><p class="gallery__caption">Tratamiento de superficies expuestas</p></article>
+      <article class="gallery__item gallery__item--wide"><div class="gallery__pair"><div class="gallery__photo"><img src="./images/works/gutters.jpg" alt="Instalación de canaleta pluvial en el borde de un techo" loading="lazy"><span class="gallery__label">Canaletas</span></div></div><p class="gallery__caption">Canaletas y desagües <span>Protección frente al agua de lluvia</span></p></article>
+       <article class="gallery__item gallery__item--roof"><div class="gallery__pair"><div class="gallery__photo"><img src="./images/works/roofing.jpg" alt="Cubierta de techo en una obra de construcción" loading="lazy"><span class="gallery__label">Cubiertas</span></div></div><p class="gallery__caption">Instalación y reparación de techos</p></article>
+      <article class="gallery__item"><div class="gallery__pair"><div class="gallery__photo"><img src="./images/works/waterproofing.jpg" alt="Detalle de tareas de impermeabilización en una cubierta" loading="lazy"><span class="gallery__label">Impermeabilización</span></div></div><p class="gallery__caption">Tratamiento de superficies expuestas</p></article>
     </div></div></section>
     <section class="coverage section-pad" id="cobertura"><div class="container"><header class="section-header"><span class="section-tag">Dónde trabajamos</span><h2 class="section-title">Capital Federal y Gran Buenos Aires</h2><p class="section-subtitle">Consultanos por disponibilidad en tu zona.</p></header><div class="coverage__cards"><article class="coverage__card"><h3 class="coverage__card-title">Capital Federal</h3><p class="coverage__card-text">Todos los barrios</p></article><article class="coverage__card"><h3 class="coverage__card-title">Zona Norte</h3><p class="coverage__card-text">San Isidro, Vicente López, Tigre</p></article><article class="coverage__card"><h3 class="coverage__card-title">GBA Oeste</h3><p class="coverage__card-text">Morón, Haedo, Ituzaingó</p></article><article class="coverage__card"><h3 class="coverage__card-title">Zona Sur</h3><p class="coverage__card-text">Lanús, Avellaneda, Quilmes</p></article></div></div></section>
     <section class="testimonials section-pad" id="testimonios"><div class="container"><header class="section-header"><span class="section-tag">Experiencias</span><h2 class="section-title">Lo que cuentan los clientes</h2><div class="testimonials__rating"><span class="testimonials__rating-num">4.9</span><div class="testimonials__stars-wrap"><span class="testimonials__stars" aria-label="5 estrellas">★★★★★</span><span class="testimonials__rating-count">basado en 200+ reseñas</span></div></div></header><div class="testimonials__grid">
