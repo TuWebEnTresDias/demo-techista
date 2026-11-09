@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scene = story.querySelector('.roof-story__visual');
   const chapters = [...story.querySelectorAll('.roof-chapter')];
   const counter = document.getElementById('roofStoryCounter');
-  const photo = story.querySelector('.roof-scene__gif');
+  const photos = story.querySelectorAll('.roof-scene__image');
   const status = document.getElementById('roofSceneStatus');
   const sceneCount = document.getElementById('roofSceneCount');
   const statuses = ['DIAGNÓSTICO EN CURSO', 'REPARACIÓN EN CURSO', 'PROTECCIÓN APLICADA'];
@@ -406,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
     story.style.setProperty('--story-shimmer', `${(progress * 100).toFixed(1)}%`);
     story.style.setProperty('--scan-position', `${16 + chapterProgress * 67}%`);
     scene.dataset.scene = String(chapterIndex);
-    if (photo) photo.style.transform = `scale(${1.02 + progress * .065}) translate3d(${(progress - .5) * -18}px, ${(progress - .5) * -8}px, 0)`;
+    photos.forEach(photo => { photo.style.transform = `scale(${1.02 + progress * .065}) translate3d(${(progress - .5) * -18}px, ${(progress - .5) * -8}px, 0)`; });
     if (active !== chapterIndex) {
       chapters.forEach((chapter, index) => {
         chapter.classList.toggle('is-active', index === chapterIndex);

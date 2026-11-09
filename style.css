@@ -75,3 +75,14 @@ html{scroll-padding-top:calc(var(--header) + 24px)} body{background:var(--white)
 @media(max-width:700px){.hero__content{padding:68px var(--pad) 275px}.hero__title,.hero__title-line--accent{font-size:clamp(3rem,13.4vw,4.55rem)}.roof-story__visual{height:100%}}
 @media(max-width:700px){.roof-story__eyebrow,.roof-story__copy h2{grid-column:1}.hero__cta .btn--primary,.mobile-cta__btn--call{display:none}.hero__cta .btn{width:auto;min-width:240px}.mobile-cta__btn--whatsapp{flex:1}}
 @media(max-width:700px){.roof-story__sticky{height:calc(100svh - var(--header) - 68px);min-height:0}}
+
+/* Hero y fotografías de las etapas */
+.hero{min-height:min(850px,calc(100svh - var(--header)));background:#17221f;align-items:center}
+.hero-art{inset:0;width:100%;height:100%;max-width:none;aspect-ratio:auto;transform:none;opacity:1;filter:none;animation:none;border-radius:0}
+.hero-photo{border:0;border-radius:0}.hero-photo img{object-position:68% center;filter:brightness(.78) saturate(.9)}
+.hero-photo__wash{background:linear-gradient(90deg,#101c18 0%,#15221deF 32%,#17231db8 55%,#17231d26 100%),linear-gradient(0deg,#15211bd9,transparent 45%)}
+.hero-photo__index{left:auto;right:clamp(24px,6vw,100px);top:48px}.hero-photo__caption{left:auto;right:clamp(24px,6vw,100px);bottom:55px}.hero-photo__corner{display:none}
+.hero__bg{display:none}.hero__content{z-index:2;padding:95px var(--pad);pointer-events:none}.hero__content a{pointer-events:auto}.hero__content>*{max-width:650px}.hero__title,.hero__title-line--accent{max-width:650px;font-size:clamp(3.5rem,6.4vw,6.2rem);line-height:.99}.hero__title-line{font-size:clamp(1.15rem,2vw,1.55rem)}.hero__subtitle{max-width:470px;font-size:1.1rem;line-height:1.65}.hero__cta{align-items:center}.hero__cta .btn{box-shadow:0 12px 30px #0003}.hero__rating{margin-top:24px}
+.roof-scene__image{opacity:0;transition:opacity .65s ease,filter .65s ease}.roof-story__visual[data-scene="0"] .roof-scene__image--0,.roof-story__visual[data-scene="1"] .roof-scene__image--1,.roof-story__visual[data-scene="2"] .roof-scene__image--2{opacity:1}.roof-scene__shade{pointer-events:none}
+@media(max-width:700px){.hero{min-height:calc(100svh - var(--header));align-items:flex-end}.hero-art{inset:0;width:100%;height:100%;max-width:none;opacity:1;transform:none}.hero-photo{border-radius:0}.hero-photo img{object-position:66% center}.hero-photo__wash{background:linear-gradient(0deg,#14201b 4%,#14201bef 36%,#14201b98 69%,#14201b55 100%)}.hero-photo__caption,.hero-photo__index{display:none}.hero__content{padding:145px var(--pad) 55px}.hero__title,.hero__title-line--accent{font-size:clamp(2.8rem,11vw,4.5rem)}.hero__title-line{font-size:1.08rem}.hero__cta .btn{width:auto}.hero__subtitle{font-size:1rem}.roof-scene__image{object-position:center}}
+@media(prefers-reduced-motion:reduce){.roof-scene__image{transition:none}.hero-photo img{animation:none}}
