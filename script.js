@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (art && !reduce && window.innerWidth > 700) {
       const travel = Math.min(window.scrollY, window.innerHeight * 1.15);
       art.style.setProperty('--scroll-y', `${travel * .12}px`);
-      art.style.translate = `0 calc(-45% + ${travel * .12}px)`;
+      art.style.translate = '0 0';
       art.style.opacity = String(Math.max(.12, 1 - travel / (window.innerHeight * 1.4)));
     }
     ticking = false;
